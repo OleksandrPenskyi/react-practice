@@ -29,7 +29,7 @@ class Counter extends Component {
 
   render() {
     return (
-      <div className={style.wrapper}>
+      <div className={style.Wrapper}>
         <p>
           Счетчиик:
           <span>{this.state.value}</span>
@@ -37,7 +37,7 @@ class Counter extends Component {
 
         <div>
           <button
-            className={style.btn}
+            className={style.Btn}
             type="button"
             onClick={this.onIncrementClick}
           >
