@@ -1,0 +1,14 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+
+  outline: 1px solid red;
+}
+
+.btn:nth-of-type(1) {
+  margin-right: 10px;
+}
