@@ -28,11 +28,13 @@ class Counter extends Component {
   };
 
   render() {
+    const { value } = this.state;
+
     return (
       <div className={style.Wrapper}>
         <p>
           Счетчиик:
-          <span>{this.state.value}</span>
+          <span>{value}</span>
         </p>
 
         <div>

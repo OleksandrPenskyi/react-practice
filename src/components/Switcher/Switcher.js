@@ -13,7 +13,7 @@ class Switcher extends Component {
   };
 
   render() {
-    const visible = this.state.visible;
+    const { visible } = this.state;
     return (
       <div className={style.Dropdown}>
         <button onClick={this.switchDropdownMenu} type="button">
