@@ -1,34 +1,21 @@
-import React, { Component } from 'react';
-import Switcher from './components/Switcher';
-import Counter from './components/Counter';
-import ColorPicker from './components/ColorPicker';
-import TodoList from './components/TodoList';
+import React from 'react';
+import { Switch, Route, Link } from 'react-router-dom';
+import CounterPage from './Page/CounterPage';
 
-import data from './data';
-const { todos, colorPicker } = data;
+const App = () => (
+  <>
+    <ul>
+      <li>
+        <Link to="/counter">Счётчик</Link>
+      </li>
+    </ul>
 
-class App extends Component {
-  state = {
-    todoList: todos,
-  };
-
-  deleteTodoItem = id => {
-    this.setState(prevState => ({
-      todoList: prevState.todoList.filter(item => item.id !== id),
-    }));
-  };
-
-  render() {
-    const { todoList } = this.state;
-    return (
-      <>
-        <Counter startValue={12} />
-        <Switcher />
-        <ColorPicker options={colorPicker} />
-        <TodoList todo={todoList} deleteTodoItem={this.deleteTodoItem} />
-      </>
-    );
-  }
-}
+    <Switch>
+      <Route path="/counter">
+        <CounterPage />
+      </Route>
+    </Switch>
+  </>
+);
 
 export default App;
